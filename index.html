@@ -10,11 +10,26 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
-    <div id="app">
+  
 
-        <h1> {{title}} </h1>
+        <div id="app">
+    
+            <div class="text-container">
+                <h1 v-bind:class="titleClass">Questo è il {{ title }} </h1>
+                <button @click ="changeColor()"> {{ buttonTitle }}</button>
+            </div>
+    
+    
+            <div class="img-container">
+                <img v-bind:src ="imgSrc" alt="">
+                <div><button @click="changeImg()"> {{ buttonImg }}</button></div>
+            </div>
+    
+    
+        </div>
+   
+    
 
-    </div>
 
 
 
